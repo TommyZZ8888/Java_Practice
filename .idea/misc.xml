@@ -11,6 +11,10 @@
         <option value="$PROJECT_DIR$/sometest/sometest/pom.xml" />
         <option value="$PROJECT_DIR$/sometest/pom.xml" />
         <option value="$PROJECT_DIR$/leetcode/pom.xml" />
+        <option value="$PROJECT_DIR$/concurrent/concurrent/pom.xml" />
+        <option value="$PROJECT_DIR$/con/test/pom.xml" />
+        <option value="$PROJECT_DIR$/con/pom.xml" />
+        <option value="$PROJECT_DIR$/concurrent/pom.xml" />
       </list>
     </option>
   </component>
