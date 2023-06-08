@@ -24,7 +24,7 @@ public class _03_goodCode {
         CompletableFuture[] futures = IntStream.rangeClosed(1, 12)
                 .mapToObj(dish -> new Dish("菜" + dish, 1))
                 .map(dish -> CompletableFuture.runAsync(dish::make))
-                .toArray(size -> new CompletableFuture[size]);
+                .toArray(CompletableFuture[]::new);
 
         CompletableFuture.allOf(futures).join();
 

@@ -34,8 +34,6 @@ public class _03_exceptionally {
             SmallTool.sleepMillis(200);
             return "叫到出租车";
         });
-
-
         SmallTool.printTimeAndThread(String.format("%s,小白坐车回家", bus.join()));
     }
 }

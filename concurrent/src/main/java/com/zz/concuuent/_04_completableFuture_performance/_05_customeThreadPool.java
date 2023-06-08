@@ -18,7 +18,7 @@ import java.util.stream.IntStream;
 public class _05_customeThreadPool {
     public static void main(String[] args) {
         // 执行速度和设置的核心数有关系，
-        // 核心数12： 1035ms   核心数5：3030ms
+        // 核心数12： 1035ms   核心数5：3030ms   核心数15：1037
         ThreadPoolExecutor threadPoolExecutor = new ThreadPoolExecutor(12, 50, 300L
                 , TimeUnit.SECONDS
                 , new LinkedBlockingDeque<>(2000)
@@ -30,7 +30,7 @@ public class _05_customeThreadPool {
         CompletableFuture[] futures = IntStream.rangeClosed(1, 12)
                 .mapToObj(dish -> new Dish("菜" + dish, 1))
                 .map(dish -> CompletableFuture.runAsync(dish::make, threadPoolExecutor))
-                .toArray(size -> new CompletableFuture[size]);
+                .toArray(CompletableFuture[]::new);
 
         CompletableFuture.allOf(futures).join();
         threadPoolExecutor.shutdown();

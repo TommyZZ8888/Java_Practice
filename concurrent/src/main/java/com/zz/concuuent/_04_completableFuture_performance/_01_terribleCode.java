@@ -27,6 +27,6 @@ public class _01_terribleCode {
         for (Dish dish : list) {
             CompletableFuture.runAsync(dish::make).join();
         }
-        SmallTool.printTimeAndThread("ok,所需时间："+ (System.currentTimeMillis()-startTime));
+        SmallTool.printTimeAndThread("ok,所需时间：" + (System.currentTimeMillis() - startTime));
     }
 }
