@@ -2,11 +2,7 @@ package com.zz.juc.threadpool;
 
 import com.zz.juc.utils.ErrorException;
 import com.zz.juc.utils.MyThreadFactory;
-
-import java.util.ArrayList;
-import java.util.List;
 import java.util.concurrent.*;
-import org.apache.commons.collections4.ListUtils;
 
 /**
  * @Description ThreadPool_01_start
@@ -32,11 +28,10 @@ public class ThreadPool_01_start {
 
 
         for (int i = 0; i < taskCount; i++) {
-            if (threadPoolExecutor.getQueue().size()+10>queueSize) {
-                throw new ErrorException("test");
+            if (threadPoolExecutor.getQueue().size()+threadPoolExecutor.getMaximumPoolSize()>queueSize) {
+                throw new ErrorException("阻塞队列满了");
             }
             threadPoolExecutor.execute(() -> {
-
                 System.out.println(Thread.currentThread().getName() + " 测试 " + threadPoolExecutor);
                 countDownLatch.countDown();
             });
