@@ -1,7 +1,10 @@
 package com.zz.juc.threadpool;
 
+import com.google.common.collect.Lists;
 import com.zz.juc.utils.ErrorException;
 import com.zz.juc.utils.MyThreadFactory;
+
+import java.util.List;
 import java.util.concurrent.*;
 
 /**
@@ -9,7 +12,7 @@ import java.util.concurrent.*;
  * @Author 张卫刚
  * @Date Created on 2023/6/28
  */
-public class ThreadPool_01_start {
+public class ThreadPool_02 {
     public static void main(String[] args) {
         System.out.println(Runtime.getRuntime().availableProcessors());
         int queueSize = 2000;
@@ -21,25 +24,26 @@ public class ThreadPool_01_start {
                 MyThreadFactory.create("start")
         );
 
-        System.err.println("start: " + System.currentTimeMillis());
-        int taskCount = 5000;
-        CountDownLatch countDownLatch = new CountDownLatch(taskCount);
+        List<Callable<Void>> callables = Lists.newArrayListWithCapacity(3);
+        callables.add(() -> {
+            System.out.println("1");
+            return null;
+        });
 
-        for (int i = 0; i < taskCount; i++) {
-            if (threadPoolExecutor.getQueue().size()+threadPoolExecutor.getMaximumPoolSize()>queueSize) {
-                throw new ErrorException("阻塞队列满了");
-            }
-            System.out.println("==========================="+Thread.currentThread().getThreadGroup());
-            threadPoolExecutor.execute(() -> {
-                System.out.println(Thread.currentThread().getName() + " 测试 " + threadPoolExecutor);
-                countDownLatch.countDown();
-            });
-        }
+        callables.add(()->{
+            System.out.println("2");
+            return null;
+        });
+
+        callables.add(()->{
+            System.out.println("3");
+            return null;
+        });
+
         try {
-            countDownLatch.await();
-            System.err.println("end: " + System.currentTimeMillis());
+            threadPoolExecutor.invokeAll(callables);
         } catch (InterruptedException e) {
-            throw new RuntimeException(e);
+            e.printStackTrace();
         }
     }
 }
