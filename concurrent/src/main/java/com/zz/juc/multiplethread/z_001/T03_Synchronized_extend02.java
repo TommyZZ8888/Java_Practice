@@ -5,7 +5,7 @@ package com.zz.juc.multiplethread.z_001;
  * @Author 张卫刚
  * @Date Created on 2023/6/29
  */
-public class T02_Synchronized_extend02 {
+public class T03_Synchronized_extend02 {
 private volatile int count = 10;
 
     public synchronized void run() {
@@ -29,7 +29,7 @@ private volatile int count = 10;
     }
 
     public static void main(String[] args) {
-        T02_Synchronized_extend02 thread = new T02_Synchronized_extend02();
+        T03_Synchronized_extend02 thread = new T03_Synchronized_extend02();
         new Thread(thread::run,"t1").start();
         new Thread(thread::run2,"t2").start();
 

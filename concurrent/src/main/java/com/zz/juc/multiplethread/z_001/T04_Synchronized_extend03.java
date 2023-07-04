@@ -7,7 +7,7 @@ import java.util.concurrent.TimeUnit;
  * @Author 张卫刚
  * @Date Created on 2023/6/29
  */
-public class T02_Synchronized_extend03 {
+public class T04_Synchronized_extend03 {
     String name;
     double balance;
 
@@ -30,7 +30,7 @@ public class T02_Synchronized_extend03 {
 
 
     public static void main(String[] args) {
-        T02_Synchronized_extend03 a = new T02_Synchronized_extend03();
+        T04_Synchronized_extend03 a = new T04_Synchronized_extend03();
         new Thread(()->a.set("zhangsan", 100.0)).start();
 
         try {
