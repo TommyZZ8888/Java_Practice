@@ -1,9 +1,6 @@
 package com.zz.juc.multiplethread;
 
-import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
+import java.util.*;
 import java.util.concurrent.Callable;
 
 import com.google.common.collect.Lists;
@@ -15,6 +12,13 @@ import com.google.common.collect.Lists;
  */
 public class ThreadDemo01 {
     public static void main(String[] args) {
+        System.out.println(new ThreadDemo01().synchronizedTest());
 
+    }
+
+    public Boolean synchronizedTest(){
+        System.out.println(this.toString());
+        System.out.println(ThreadDemo01.class.toString());
+       return this.equals(ThreadDemo01.class);
     }
 }
