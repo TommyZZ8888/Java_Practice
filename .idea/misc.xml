@@ -15,6 +15,7 @@
         <option value="$PROJECT_DIR$/con/test/pom.xml" />
         <option value="$PROJECT_DIR$/con/pom.xml" />
         <option value="$PROJECT_DIR$/concurrent/pom.xml" />
+        <option value="$PROJECT_DIR$/designpattern/pom.xml" />
       </list>
     </option>
   </component>
