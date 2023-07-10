@@ -17,7 +17,7 @@ public class AlternatelyExecuteTest {
 //        executorService.execute(() -> t.turnPrint("A", true, false));
 //        executorService.execute(() -> t.turnPrint("B", false, true));
 
-        printTest03();
+        printTest06();
     }
 
     /**
@@ -204,6 +204,47 @@ public class AlternatelyExecuteTest {
                 this.notifyAll();
             }
         }
+    }
+
+
+    /**
+     * CyclicBarrier
+     */
+    public static void printTest06(){
+        CyclicBarrier barrier = new CyclicBarrier(2, () -> {
+            System.out.println("+++++++++++++++++++++++++++++");
+        });
+
+        Thread threadA = new Thread(() -> {
+            for (int i = 0; i < 50; i++) {
+                System.out.println("A");
+                try {
+                    //通知到达屏障
+                    barrier.await();
+                    //阻塞
+                    barrier.await();
+                } catch (InterruptedException | BrokenBarrierException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+        });
+
+        Thread threadB = new Thread(() -> {
+            for (int i = 0; i < 50; i++) {
+                try {
+                    //阻塞当前线程，先输出A
+                    barrier.await();
+                    System.out.println("B");
+                    //通知到达屏障
+                    barrier.await();
+                } catch (InterruptedException | BrokenBarrierException e) {
+                    throw new RuntimeException(e);
+                }
+            }
+        });
+
+        threadA.start();
+        threadB.start();
     }
 
 }
