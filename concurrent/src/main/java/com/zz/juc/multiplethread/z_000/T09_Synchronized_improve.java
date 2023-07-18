@@ -1,4 +1,4 @@
-package com.zz.juc.multiplethread.z_001;
+package com.zz.juc.multiplethread.z_000;
 
 
 /**
@@ -8,7 +8,7 @@ package com.zz.juc.multiplethread.z_001;
  * @Author 张卫刚
  * @Date Created on 2023/6/29
  */
-public class T05_Synchronized_improve {
+public class T09_Synchronized_improve {
 
     synchronized void m1() {
         System.out.println("m1 start");
@@ -33,6 +33,6 @@ public class T05_Synchronized_improve {
     }
 
     public static void main(String[] args) {
-        new T05_Synchronized_improve().m1();
+        new T09_Synchronized_improve().m1();
     }
 }

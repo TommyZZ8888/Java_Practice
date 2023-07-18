@@ -1,11 +1,11 @@
-package com.zz.juc.multiplethread.z_002;
+package com.zz.juc.multiplethread.z_001;
 
 /**
  * @Description T01_Volatile_start
  * @Author 张卫刚
  * @Date Created on 2023/7/4
  */
-public class T01_Volatile_start {
+public class T08_Volatile_start {
 
     //有无volatile测试
    /* volatile */ boolean flag = false;
@@ -20,7 +20,7 @@ public class T01_Volatile_start {
     }
 
     public static void main(String[] args) {
-        T01_Volatile_start t = new T01_Volatile_start();
+        T08_Volatile_start t = new T08_Volatile_start();
 //        Runnable runnable = new Runnable() {
 //
 //            @Override

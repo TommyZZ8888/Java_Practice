@@ -1,4 +1,4 @@
-package com.zz.juc.multiplethread.z_003;
+package com.zz.juc.multiplethread.z_001;
 
 /**
  * @Description 不要以字符串常量作为锁定对象
@@ -8,7 +8,7 @@ package com.zz.juc.multiplethread.z_003;
  * @Author 张卫刚
  * @Date Created on 2023/7/5
  */
-public class T02_Lock_AboutSync01 {
+public class T10_Lock_AboutSync01 {
    String s1 = "hello";
    String s2 = "hello";
 

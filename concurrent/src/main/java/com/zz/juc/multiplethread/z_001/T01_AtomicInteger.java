@@ -1,4 +1,4 @@
-package com.zz.juc.multiplethread.z_004;
+package com.zz.juc.multiplethread.z_001;
 
 import java.util.List;
 import java.util.concurrent.atomic.AtomicInteger;

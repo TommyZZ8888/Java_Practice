@@ -1,4 +1,4 @@
-package com.zz.juc.multiplethread.z_001;
+package com.zz.juc.multiplethread.z_000;
 
 
 /**
@@ -11,7 +11,7 @@ package com.zz.juc.multiplethread.z_001;
  * @Author 张卫刚
  * @Date Created on 2023/6/29
  */
-public class T07_Synchronized_improve03 {
+public class T11_Synchronized_improve03 {
 
     int count = 0;
 
@@ -31,7 +31,7 @@ public class T07_Synchronized_improve03 {
     }
 
     public static void main(String[] args) {
-        T07_Synchronized_improve03 t = new T07_Synchronized_improve03();
+        T11_Synchronized_improve03 t = new T11_Synchronized_improve03();
         Runnable runnable = new Runnable() {
 
             @Override

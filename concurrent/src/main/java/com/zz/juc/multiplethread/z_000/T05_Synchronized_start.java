@@ -1,4 +1,4 @@
-package com.zz.juc.multiplethread.z_001;
+package com.zz.juc.multiplethread.z_000;
 
 /**
  * @Description
@@ -19,7 +19,7 @@ package com.zz.juc.multiplethread.z_001;
  * @Author 张卫刚
  * @Date Created on 2023/6/29
  */
-public class T01_Synchronized_start {
+public class T05_Synchronized_start {
    private int count = 10;
 //   private Object o  =new Object();
 
@@ -37,14 +37,14 @@ public class T01_Synchronized_start {
 
 
    public void test03(){
-       synchronized (T01_Synchronized_start.class){
+       synchronized (T05_Synchronized_start.class){
            count--;
            System.out.println(Thread.currentThread().getName()+" count "+ count);
        }
    }
 
     public static void main(String[] args) {
-        T01_Synchronized_start demo01 = new T01_Synchronized_start();
+        T05_Synchronized_start demo01 = new T05_Synchronized_start();
         demo01.test03();
     }
 }

@@ -1,11 +1,11 @@
-package com.zz.juc.multiplethread.z_003;
+package com.zz.juc.multiplethread.z_001;
 
 /**
  * @Description T01_Lock_fineCoarseLock
  * @Author 张卫刚
  * @Date Created on 2023/7/5
  */
-public class T01_Lock_FineCoarseLock {
+public class T06_Lock_FineCoarseLock {
     int count = 0;
 
     synchronized void m() {

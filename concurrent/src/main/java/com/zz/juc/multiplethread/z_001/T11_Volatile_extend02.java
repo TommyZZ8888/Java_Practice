@@ -1,4 +1,4 @@
-package com.zz.juc.multiplethread.z_002;
+package com.zz.juc.multiplethread.z_001;
 
 
 /**
@@ -6,7 +6,7 @@ package com.zz.juc.multiplethread.z_002;
  * @Author 张卫刚
  * @Date Created on 2023/7/4
  */
-public class T03_Volatile_extend02 {
+public class T11_Volatile_extend02 {
 
     private static class Data {
         int x;

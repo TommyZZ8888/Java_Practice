@@ -1,4 +1,4 @@
-package com.zz.juc.multiplethread.z_003;
+package com.zz.juc.multiplethread.z_001;
 
 /**
  * @Description 锁定对象o，o的属性改变不会影响锁的使用

@@ -1,4 +1,4 @@
-package com.zz.juc.multiplethread.z_005;
+package com.zz.juc.multiplethread.z_001;
 
 import sun.misc.Unsafe;
 
@@ -7,7 +7,7 @@ import sun.misc.Unsafe;
  * @Author 张卫刚
  * @Date Created on 2023/7/10
  */
-public class T01_Unsafe {
+public class T07_Unsafe {
 
     static class M{
         private M(){}

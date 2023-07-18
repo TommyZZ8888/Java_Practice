@@ -1,4 +1,4 @@
-package com.zz.juc.multiplethread.z_002;
+package com.zz.juc.multiplethread.z_001;
 
 import java.util.concurrent.TimeUnit;
 
@@ -7,11 +7,11 @@ import java.util.concurrent.TimeUnit;
  * @Author 张卫刚
  * @Date Created on 2023/7/4
  */
-public class T02_Volatile_extend {
+public class T09_Volatile_extend {
 
     boolean flag = true;
 
-    volatile static T02_Volatile_extend t = new T02_Volatile_extend();
+    volatile static T09_Volatile_extend t = new T09_Volatile_extend();
 
     void m() {
         System.out.println("m start");
