@@ -1,6 +1,7 @@
 package com.zz.sometest;
 
 import com.zz.sometest.bean.BaseService;
+import com.zz.sometest.redis.fivetype.StringRedisTest;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -18,12 +19,17 @@ class SometestApplicationTests {
     @Autowired
     private Map<String,BaseService> baseServiceMap;
 
+    @Autowired
+    private StringRedisTest stringRedisTest;
+
     @Test
     void contextLoads() {
-        System.out.println(baseServiceList.size());
-        for (BaseService baseService : baseServiceList) {
-            System.out.println(baseServiceMap.get(baseService.getClass().getSimpleName()));
-        }
+
+        stringRedisTest.set();
+//        System.out.println(baseServiceList.size());
+//        for (BaseService baseService : baseServiceList) {
+//            System.out.println(baseServiceMap.get(baseService.getClass().getSimpleName()));
+//        }
     }
 
 }

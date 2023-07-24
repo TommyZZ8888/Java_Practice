@@ -17,7 +17,7 @@ public class AlternatelyExecuteTest {
 //        executorService.execute(() -> t.turnPrint("A", true, false));
 //        executorService.execute(() -> t.turnPrint("B", false, true));
 
-        printTest06();
+        printTest02();
     }
 
     /**
@@ -61,6 +61,7 @@ public class AlternatelyExecuteTest {
                     semaphoreA.acquire();
                     System.out.println("A");
                     semaphoreB.release();
+
                 } catch (InterruptedException e) {
                     throw new RuntimeException(e);
                 }
@@ -136,7 +137,7 @@ public class AlternatelyExecuteTest {
         ReentrantLock lock = new ReentrantLock();
         Condition conditionA = lock.newCondition();
         Condition conditionB = lock.newCondition();
-
+boolean f= true;
 
         Thread threadA = new Thread(() -> {
             lock.lock();
