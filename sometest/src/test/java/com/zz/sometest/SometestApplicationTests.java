@@ -25,7 +25,7 @@ class SometestApplicationTests {
     @Test
     void contextLoads() {
 
-        stringRedisTest.set();
+
 //        System.out.println(baseServiceList.size());
 //        for (BaseService baseService : baseServiceList) {
 //            System.out.println(baseServiceMap.get(baseService.getClass().getSimpleName()));
