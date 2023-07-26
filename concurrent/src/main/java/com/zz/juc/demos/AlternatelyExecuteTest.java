@@ -137,7 +137,6 @@ public class AlternatelyExecuteTest {
         ReentrantLock lock = new ReentrantLock();
         Condition conditionA = lock.newCondition();
         Condition conditionB = lock.newCondition();
-boolean f= true;
 
         Thread threadA = new Thread(() -> {
             lock.lock();
@@ -211,7 +210,7 @@ boolean f= true;
     /**
      * CyclicBarrier
      */
-    public static void printTest06(){
+    public static void printTest06() {
         CyclicBarrier barrier = new CyclicBarrier(2, () -> {
             System.out.println("+++++++++++++++++++++++++++++");
         });
