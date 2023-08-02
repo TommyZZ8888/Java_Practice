@@ -10,7 +10,6 @@
         <module name="concurrent" />
         <module name="designpattern" />
         <module name="leetcode" />
-        <module name="niceutil" />
         <module name="springframe" />
         <module name="sometest" />
       </profile>
@@ -21,7 +20,6 @@
       <module name="concurrent" options="-parameters" />
       <module name="designpattern" options="-parameters" />
       <module name="leetcode" options="-parameters" />
-      <module name="niceutil" options="-parameters" />
       <module name="sometest" options="-parameters" />
       <module name="springframe" options="" />
     </option>
