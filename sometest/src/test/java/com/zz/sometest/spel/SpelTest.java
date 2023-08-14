@@ -42,10 +42,7 @@ public class SpelTest {
 
         System.out.println(parser.parseExpression("#user?.car?.name").getValue(context, String.class));
 
-        Car car = new Car();
-        car.setName("porsche");
-        user.setCar(car);
-        System.out.println(parser.parseExpression("#user?.car?.toString()").getValue(context, String.class));
+
     }
 
 
@@ -53,20 +50,7 @@ public class SpelTest {
     //spel支持用“@”符号来引用bean，在引用bean时需要使用BeanResolver来查找bean，spring提供beanFactoryResolver实现
     @Test
     void test1() {
-        DefaultListableBeanFactory factory = new DefaultListableBeanFactory();
-        Car car = new Car();
-        car.setName("porsche");
-        User user = new User();
-        user.setCar(car);
-        factory.registerSingleton("user", user);
 
-        StandardEvaluationContext context = new StandardEvaluationContext();
-        context.setBeanResolver(new BeanFactoryResolver(factory));
-
-        SpelExpressionParser parser = new SpelExpressionParser();
-        User value = parser.parseExpression("@user").getValue(context, user.getClass());
-        System.out.println(value);
-        System.out.println(value == factory.getBean("user"));
     }
 
 
