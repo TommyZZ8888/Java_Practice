@@ -8,6 +8,8 @@ import java.lang.reflect.ParameterizedType;
 import java.lang.reflect.Type;
 import java.util.Calendar;
 import java.util.Date;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
 
 /**
  * @Description TestService
@@ -16,13 +18,25 @@ import java.util.Date;
  */
 public class TestService {
 
+
     private User user;
 
     public static void main(String[] args) {
-        String s = SecureUtil.md5("123456");
-        System.out.println(s);
-        String md5 =new String(SecureUtil.decode(s));
-        System.out.println(md5);
+//        String s = SecureUtil.md5("123456");
+//        System.out.println(s);
+//        String md5 =new String(SecureUtil.decode(s));
+//        System.out.println(md5);
+
+        ExecutorService executor = Executors.newCachedThreadPool();
+        executor.execute(()->{
+            try {
+                Thread.sleep(1000);
+            } catch (InterruptedException e) {
+                throw new RuntimeException(e);
+            }
+            System.out.println("ok");
+        });
+  
     }
 
 
