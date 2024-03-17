@@ -5,11 +5,11 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * @Description TwoSum
+ * @Description LC_1_TwoSum
  * @Author 张卫刚
  * @Date Created on 2023/7/26
  */
-public class TwoSum {
+public class LC_1_TwoSum {
 
 
     /**
