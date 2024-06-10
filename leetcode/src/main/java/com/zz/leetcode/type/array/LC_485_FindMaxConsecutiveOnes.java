@@ -15,7 +15,7 @@ public class LC_485_FindMaxConsecutiveOnes {
     public static int solution1(int[] nums) {
         int max = 0;
         int ans = 0;
-        for (int num : nums) {git
+        for (int num : nums) {
             if (num == 1) {
                 ans++;
             } else {
