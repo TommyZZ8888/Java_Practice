@@ -10,7 +10,6 @@ import java.util.Arrays;
 public class LC_338_CountBit {
     public static void main(String[] args) {
         System.out.println(Arrays.toString(solution(5)));
-        System.out.println((3 & 1) == 0);
     }
 
     /**
@@ -26,7 +25,7 @@ public class LC_338_CountBit {
         res[0] = 0;
         for (int i = 1; i <= n; i++) {
             //位与运算 替代 i % 2 效率更好
-            if ((i & 1)==0) {
+            if ((i & 1) == 0) {
                 res[i] = res[i >> 1];
             } else {
                 res[i] = res[i - 1] + 1;
