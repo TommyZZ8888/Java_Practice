@@ -8,11 +8,11 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="concurrent" />
+        <module name="java_base" />
         <module name="designpattern" />
         <module name="leetcode" />
         <module name="niceutil" />
         <module name="springframe" />
-        <module name="sometest" />
       </profile>
     </annotationProcessing>
   </component>
@@ -20,9 +20,9 @@
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="concurrent" options="-parameters" />
       <module name="designpattern" options="-parameters" />
+      <module name="java_base" options="-parameters" />
       <module name="leetcode" options="-parameters" />
       <module name="niceutil" options="-parameters" />
-      <module name="sometest" options="-parameters" />
       <module name="springframe" options="" />
     </option>
   </component>

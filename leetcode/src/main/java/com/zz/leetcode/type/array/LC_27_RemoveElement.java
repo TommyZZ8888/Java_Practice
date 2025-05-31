@@ -9,6 +9,8 @@ public class LC_27_RemoveElement {
     public static void main(String[] args) {
         int[] ints = {3, 2, 3, 2};
         System.out.println(solution2(ints, 3));
+
+//        solution3(ints,3);
     }
 
     public static int solution1(int[] nums, int val) {

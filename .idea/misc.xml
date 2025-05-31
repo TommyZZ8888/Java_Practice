@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ExternalStorageConfigurationManager" enabled="true" />
   <component name="FrameworkDetectionExcludesConfiguration">
-    <file type="web" url="file://$PROJECT_DIR$/sometest" />
+    <file type="web" url="file://$PROJECT_DIR$/java_base" />
   </component>
   <component name="MavenProjectsManager">
     <option name="originalFiles">
@@ -19,9 +19,9 @@
         <option value="$PROJECT_DIR$/s/springframe/pom.xml" />
         <option value="$PROJECT_DIR$/springframe/pom.xml" />
         <option value="$PROJECT_DIR$/niceutil/pom.xml" />
+        <option value="$PROJECT_DIR$/java_base/pom.xml" />
       </list>
     </option>
-    <option name="workspaceImportForciblyTurnedOn" value="true" />
   </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_21" project-jdk-name="21" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/out" />

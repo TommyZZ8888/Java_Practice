@@ -15,7 +15,9 @@ import java.util.stream.Collectors;
 public class LC_26_RemoveDuplicates {
     public static void main(String[] args) {
         int[] ints = {1, 1, 2};
-        System.out.println(solution4(ints, 2, ints[ints.length - 1]));
+        ints = new int[]{0, 1, 2};
+//        System.out.println(solution4(ints, 2, ints[ints.length - 1]));
+        solution3(ints);
     }
 
 
@@ -52,6 +54,7 @@ public class LC_26_RemoveDuplicates {
                 nums[++j] = nums[i];
             }
         }
+        System.out.println(Arrays.toString(nums));
         return j + 1;
     }
 
