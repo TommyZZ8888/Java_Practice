@@ -38,4 +38,43 @@ public class PageResult<T> {
      */
     private List<T> list;
 
+    public void setPage(Long page) {
+        this.page = page;
+    }
+
+    public void setPageSize(Long pageSize) {
+        this.pageSize = pageSize;
+    }
+
+    public void setTotal(Long total) {
+        this.total = total;
+    }
+
+    public void setPages(Long pages) {
+        this.pages = pages;
+    }
+
+    public void setList(List<T> list) {
+        this.list = list;
+    }
+
+    public Long getPage() {
+        return page;
+    }
+
+    public Long getPageSize() {
+        return pageSize;
+    }
+
+    public Long getTotal() {
+        return total;
+    }
+
+    public Long getPages() {
+        return pages;
+    }
+
+    public List<T> getList() {
+        return list;
+    }
 }

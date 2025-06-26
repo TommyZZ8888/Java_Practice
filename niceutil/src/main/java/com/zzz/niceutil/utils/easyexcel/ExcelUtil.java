@@ -3,8 +3,8 @@ package com.zzz.niceutil.utils.easyexcel;
 import com.alibaba.excel.EasyExcel;
 import com.alibaba.excel.support.ExcelTypeEnum;
 import com.alibaba.excel.write.style.column.LongestMatchColumnWidthStyleStrategy;
-import com.vren.common.common.listener.ExcelListener;
 import org.apache.ibatis.type.TypeReference;
+import com.zzz.niceutil.utils.easyexcel.ExcelListener;
 
 import javax.servlet.http.HttpServletResponse;
 import java.io.InputStream;
