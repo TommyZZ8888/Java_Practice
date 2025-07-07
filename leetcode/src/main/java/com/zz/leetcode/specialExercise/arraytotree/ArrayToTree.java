@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Optional;
+import java.util.stream.Collectors;
 
 /**
  * @Describtion: ArrayToTree
@@ -43,21 +44,21 @@ public class ArrayToTree {
 		}
 		System.out.println(System.currentTimeMillis());
 
-		return all.stream().filter(ca -> ca.getParentId() == null).toList();
+		return all.stream().filter(ca -> ca.getParentId() == null).collect(Collectors.toList());
 	}
 
 	private static List<Category> buildTreeSolution2(List<Category> all) {
 		System.out.println(System.currentTimeMillis());
 		List<Category> categoryList = new ArrayList<>();
-		List<Category> collect = all.stream().filter(ca -> ca.getParentId() == null).toList();
-		List<Category> list = all.stream().filter(ca -> ca.getParentId() != null).toList();
+		List<Category> collect = all.stream().filter(ca -> ca.getParentId() == null).collect(Collectors.toList());
+		List<Category> list = all.stream().filter(ca -> ca.getParentId() != null).collect(Collectors.toList());
 		for (Category category : collect) {
-			List<Category> children = list.stream().filter(ca -> ca.getParentId().equals(category.getId())).toList();
+			List<Category> children = list.stream().filter(ca -> ca.getParentId().equals(category.getId())).collect(Collectors.toList());
 			category.setChildren(children);
 			categoryList.add(category);
 		}
 		System.out.println(System.currentTimeMillis());
-		return categoryList.stream().filter(ca -> ca.getParentId() == null).toList();
+		return categoryList.stream().filter(ca -> ca.getParentId() == null).collect(Collectors.toList());
 	}
 
 }

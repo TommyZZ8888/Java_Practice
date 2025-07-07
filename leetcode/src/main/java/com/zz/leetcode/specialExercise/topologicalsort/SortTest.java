@@ -1,5 +1,6 @@
-package com.zz.sometest.test;
+package com.zz.leetcode.specialExercise.topologicalsort;
 
+import lombok.extern.slf4j.Slf4j;
 
 import java.util.*;
 
@@ -8,7 +9,8 @@ import java.util.*;
  * @Author: 张卫刚
  * @Date: 2024/3/30 16:25
  */
-public class ListTest {
+@Slf4j
+public class SortTest {
     public static void main(String[] args) throws InterruptedException {
 
         testLeetcode();
@@ -61,4 +63,3 @@ public class ListTest {
 
     }
 }
-
